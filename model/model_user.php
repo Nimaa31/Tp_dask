@@ -35,4 +35,21 @@
         }
     }
 
+    function showAlltask($bdd){
+        try{
+            $req = $bdd->prepare('SELECT * FROM task');
+            $req->execute();
+            while($data = $req->fetch()){
+                echo '<p> <input type="checkbox" 
+                name="check[]" value="'.$data['id_task'].'"><a href="update_user.php?id='.$data['id_task'].'">Nom : '.$data['name_task'].' date: '.$data['date'].' 
+                valide: '.$data['valide_task'].'</a></p>';
+            }
+        }
+        catch(Exception $e)
+        {
+            //affichage d'une exception en cas d’erreur
+            die('Erreur : '.$e->getMessage());
+        }
+    }
+
 ?>

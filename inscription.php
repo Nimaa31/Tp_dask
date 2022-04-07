@@ -4,7 +4,7 @@
     /*---------------------------------------
                     IMPORT
     -----------------------------------------*/
-    include 'navHome.php';
+    include './view/navHome.php';
     //importer la connexion à la bdd
     include './utils/connectBdd.php';
     //importer le model
@@ -35,7 +35,7 @@
             //appel de la fonction ajouter  un user en BDD
             adduser($bdd, $nom, $prenom, $mail,$mdp) ;
             //message
-            echo "$nom à été ajouté en  BDD";
+            echo "$nom vien de s'inscrire bien jouer bg ";
             echo '<script>
          setTimeout(()=>{
          document.location.href="./connexion.php"; 

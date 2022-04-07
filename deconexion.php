@@ -4,5 +4,5 @@
   
   // Détruire la session.
   session_destroy();
-header("Location: ./inscription.php");
+header('Location: ./index.php');
 ?>

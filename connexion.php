@@ -2,7 +2,7 @@
     /*---------------------------------------
                     IMPORT
     -----------------------------------------*/
-    include 'navHome.php';
+    include './view/navHome.php';
     //importer la connexion à la bdd
     include './utils/connectBdd.php';
     //importer le model
